@@ -46,7 +46,7 @@ dump.close()
 ''' % {'suffix': mech, 'cvode': cvodes}
 
 
-for m in product(['cnexp', 'derivimplicit'], ['rates', 'inline']):
+for m in product(['cnexp', 'derivimplicit'], ['rates', 'inline', 'nopar_rates']):
     n = '_'.join(m)
     h(template(n, cvode=True))
     h(template(n, cvode=False))
